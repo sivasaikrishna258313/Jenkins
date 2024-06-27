@@ -1,9 +1,24 @@
 pipeline {
     agent any
     stages { 
-        stage('Example') {
+        stage('Build') {
             steps {
-                echo 'Hello World'
+                echo 'In Build Environment'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'In Test Environment'
+            }
+        }
+        stage('QA') {
+            steps {
+                echo 'In QA Environment'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'IDeployed to production'
             }
         }
     }
